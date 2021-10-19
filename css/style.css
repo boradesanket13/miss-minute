@@ -204,7 +204,7 @@ li {
 }
 
 .sec:after {
-    background: #d00;
+    background: rgb(204, 2, 2);
     border-radius: 50%;
     content: "";
     display: block;
