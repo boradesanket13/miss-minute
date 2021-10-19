@@ -1,0 +1,221 @@
+body {
+    background: rgb(250, 214, 220);
+    color: rgb(0, 0, 0);
+    font-family: Arial;
+}
+
+ul {
+    list-style: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+li {
+    position: absolute;
+    transform-origin: 50% 100%;
+    height: 160px;
+}
+
+.hours {
+    left: 120px;
+    font-size: 23.333333333px;
+    letter-spacing: -1.7px;
+    line-height: 45px;
+}
+
+.hours li {
+    width: 80px;
+}
+
+.hours span {
+    display: block;
+}
+
+.hours li:nth-of-type(1) {
+    transform: rotate(30deg);
+}
+
+.hours li:nth-of-type(1) span {
+    transform: rotate(-30deg);
+}
+
+.hours li:nth-of-type(2) {
+    transform: rotate(60deg);
+}
+
+.hours li:nth-of-type(2) span {
+    transform: rotate(-60deg);
+}
+
+.hours li:nth-of-type(3) {
+    transform: rotate(90deg);
+}
+
+.hours li:nth-of-type(3) span {
+    transform: rotate(-90deg);
+}
+
+.hours li:nth-of-type(4) {
+    transform: rotate(120deg);
+}
+
+.hours li:nth-of-type(4) span {
+    transform: rotate(-120deg);
+}
+
+.hours li:nth-of-type(5) {
+    transform: rotate(150deg);
+}
+
+.hours li:nth-of-type(5) span {
+    transform: rotate(-150deg);
+}
+
+.hours li:nth-of-type(6) {
+    transform: rotate(180deg);
+}
+
+.hours li:nth-of-type(6) span {
+    transform: rotate(-180deg);
+}
+
+.hours li:nth-of-type(7) {
+    transform: rotate(210deg);
+}
+
+.hours li:nth-of-type(7) span {
+    transform: rotate(-210deg);
+}
+
+.hours li:nth-of-type(8) {
+    transform: rotate(240deg);
+}
+
+.hours li:nth-of-type(8) span {
+    transform: rotate(-240deg);
+}
+
+.hours li:nth-of-type(9) {
+    transform: rotate(270deg);
+}
+
+.hours li:nth-of-type(9) span {
+    transform: rotate(-270deg);
+}
+
+.hours li:nth-of-type(10) {
+    transform: rotate(300deg);
+}
+
+.hours li:nth-of-type(10) span {
+    transform: rotate(-300deg);
+}
+
+.hours li:nth-of-type(11) {
+    transform: rotate(330deg);
+}
+
+.hours li:nth-of-type(11) span {
+    transform: rotate(-330deg);
+}
+
+.hours li:nth-of-type(12) {
+    transform: rotate(360deg);
+}
+
+.hours li:nth-of-type(12) span {
+    transform: rotate(-360deg);
+}
+
+#clock {
+    background: rgb(166, 240, 240);
+    border: 14px solid #222;
+    border-radius: 50%;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 100px auto;
+}
+
+.hr-hand,
+.min-hand,
+.sec-hand {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+}
+
+.hand {
+    position: absolute;
+    bottom: 51%;
+    transform-origin: 50% 100%;
+}
+
+.hr {
+    background: #222;
+    left: 151px;
+    width: 14px;
+    height: 85px;
+    border-radius: 11px;
+    animation: rotateHand 43200s linear infinite;
+}
+
+.hr:after {
+    background: #222;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    width: 13px;
+    height: 16px;
+}
+
+.min {
+    background: #222;
+    left: 155px;
+    width: 9px;
+    height: 125px;
+    border-radius: 8px;
+    animation: rotateHand 3600s linear infinite;
+}
+
+.min:after {
+    background: #222;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    width: 9px;
+    height: 17px;
+}
+
+.sec {
+    background: #d00;
+    left: 156.5px;
+    width: 5px;
+    height: 132px;
+    border-radius: 8px;
+    animation: rotateHand 60s linear infinite;
+}
+
+.sec:after {
+    background: #d00;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3.5px;
+    width: 5px;
+    height: 7px;
+}
+
+@keyframes rotateHand {
+    to {
+        transform: rotate(1turn);
+    }
+} 
