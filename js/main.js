@@ -15,3 +15,9 @@ function setAngle(wrapper, angle) {
 setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
+
+function themeChange(){
+   let element = document.body;
+   element.classList.toggle("darkmodecss");
+}
+
