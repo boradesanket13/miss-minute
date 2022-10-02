@@ -1,5 +1,6 @@
 body {
-    background: rgb(250, 214, 220);
+    background: url("../images/moroccan-flower-dark.webp");
+    background-repeat: repeat;
     color: rgb(0, 0, 0);
     font-family: Arial;
 }
@@ -131,8 +132,8 @@ li {
 }
 
 #clock {
-    background: rgb(166, 240, 240);
-    border: 14px solid #222;
+    background: rgb(231, 212, 206);
+    border: 14px solid rgb(46, 31, 31);
     border-radius: 50%;
     position: relative;
     width: 320px;
