@@ -1,5 +1,6 @@
 body {
-    background: rgb(250, 214, 220);
+    background-image: url("download.jpg");
+    /* background: rgb(250, 214, 220); */
     color: rgb(0, 0, 0);
     font-family: Arial;
 }
