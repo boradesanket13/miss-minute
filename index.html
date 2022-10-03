@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title></title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Style.css Linked-->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
+  
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Style.css Linked-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <button onclick="themeChange()">Change</button> -->
+  </head>
+  
+  <body>
+    <div class="theme">
+    <header class="heading">Change Theme</header>
+  <label class="switch">
+    <input type="checkbox" id="toggle" onclick="themeChange()">
+    <span class="slider round"></span>
+  </label>
+  </div>
   <div id='clock'>
     <ul class='hours'>
       <li><span>
@@ -145,9 +153,9 @@
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
-</div>
-
-
+  </div>
+  
+  
 </body>
 <script src="js/main.js"></script>
 
