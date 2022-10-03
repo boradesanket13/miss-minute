@@ -224,6 +224,11 @@ li {
     width: 320px;
     height: 320px;
     margin: 22px auto;
+    box-shadow:
+    1.3px 1.3px 7.6px -13px rgba(0, 0, 0, 0.096),
+    4.2px 4.5px 11.1px -13px rgba(0, 0, 0, 0.162),
+    19px 20px 22px -13px rgba(0, 0, 0, 0.44)
+  ;  
 }
 
 .hr-hand,
