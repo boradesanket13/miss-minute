@@ -7,8 +7,9 @@ body {
 
 .darkmodecss{
     background-image: url("darkwall.jpg");
-    color: white;
+    color: rgb(160, 0, 21);
     font-family: Arial;
+    
 }
 
 .btn{
