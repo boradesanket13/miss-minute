@@ -16,8 +16,14 @@ setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
 
-function themeChange(){
-   let element = document.body;
-   element.classList.toggle("darkmodecss");
+function themeChange() {
+    let element = document.body;
+    element.classList.toggle("darkmodecss")
+    var x = document.querySelector(".heading")
+    if (x.innerHTML === "Light") {
+        x.innerHTML = "Dark";
+    } else {
+        x.innerHTML = "Light";
+    }
 }
 
