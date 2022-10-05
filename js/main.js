@@ -16,8 +16,17 @@ setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
 
-function themeChange(){
-   let element = document.body;
-   element.classList.toggle("darkmodecss");
+function themeChange() {
+    let element = document.body;
+    element.classList.toggle("darkmodecss");
+    var x = document.querySelector(".heading")
+    if (x.innerHTML === "Light") {
+        x.innerHTML = "Dark";
+        document.getElementById("icon").classList.add('bxs-moon');
+        document.getElementById("icon").classList.remove('bxs-sun');
+    } else {
+        x.innerHTML = "Light";
+        document.getElementById("icon").classList.add('bxs-sun');
+        document.getElementById("icon").classList.remove('bxs-moon');
+    }
 }
-
