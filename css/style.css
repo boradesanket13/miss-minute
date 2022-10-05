@@ -568,6 +568,7 @@ input:checked+.slider:before {
 }
 
 .bxs-moon {
+    color: black;
     position: relative;
     top: 9px;
     right: 3px;
