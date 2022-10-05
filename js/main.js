@@ -16,8 +16,12 @@ setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
 
-function themeChange(){
-   let element = document.body;
-   element.classList.toggle("darkmodecss");
-}
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
 
+toggle.addEventListener('click',function(){
+    this.classList.toggle('bi-moon');
+    body.classList.add('darkmodecss');
+    if(this.classList.toggle('bi-brightness-high-fill'))
+    body.classList.remove('darkmodecss');
+})
