@@ -316,10 +316,11 @@ li {
     margin-top: 20px;
     font-size: 20px;
 }
+
 i{
     font-size: 35px;
     cursor: pointer;
     position: absolute;
     top: 10px;
-    left: 49%;
+    right : 20px;
 }
