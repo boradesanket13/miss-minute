@@ -16,13 +16,44 @@ setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
 
+function themeChange() {
+    let element = document.body;
+    element.classList.toggle("darkmodecss");
+    element.classList.toggle("cite");
+    var x = document.querySelector(".heading")
+    
+    if (x.innerHTML === "Light") {
+        x.innerHTML = "Dark";
+        document.getElementById("icon").classList.add('bxs-moon');
+        document.getElementById("icon").classList.remove('bxs-sun');
+    } else {
+        x.innerHTML = "Light";
+        document.getElementById("icon").classList.add('bxs-sun');
+        document.getElementById("icon").classList.remove('bxs-moon');
+    }
+}
 
-const toggle = document.getElementById('toggleDark');
-const body = document.querySelector('body');
+// quotes
 
-toggle.addEventListener('click',function(){
-    this.classList.toggle('bi-moon');
-    body.classList.add('darkmodecss');
-    if(this.classList.toggle('bi-brightness-high-fill'))
-    body.classList.remove('darkmodecss');
-})
+const quote = document.querySelector("q");
+const cite = document.querySelector("cite");
+
+updateQuote();
+
+// API -> https://github.com/lukePeavey/quotable
+async function updateQuote() {
+  const response = await fetch("https://api.quotable.io/random");
+  const data = await response.json();
+  if (response.ok) {
+    // Update DOM elements
+    quote.innerText = data.content;
+    cite.textContent = "~ " + data.author + " ~";
+  } else {
+    quote.textContent = "An error occured";
+    console.log(data);
+  }
+}
+
+
+
+

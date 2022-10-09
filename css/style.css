@@ -3,13 +3,18 @@ body {
     /* background: rgb(250, 214, 220); */
     color: rgb(0, 0, 0);
     font-family: Arial;
+    text-shadow: 3px 2px 5px rgb(255, 255, 255);
+   
 }
 
 .darkmodecss {
     background-image: url("darkwall.jpg");
-    color: white;
+   
     font-family: Arial;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 2px 5px rgb(0, 0, 0);
 }
+
 
 .btn {
     margin-left: 0;
@@ -140,9 +145,7 @@ li {
 .hours li:nth-of-type(12) span {
     transform: rotate(-360deg);
 }
-.darkmodecss .hours li span {
-    color: #000;
-}
+
 
 .line {
     width: 2px;
@@ -410,7 +413,6 @@ li {
     width: 320px;
     height: 320px;
     margin: 22px auto;
-    margin-top: 100px;
     box-shadow:
         1.3px 1.3px 7.6px -13px rgba(0, 0, 0, 0.096),
         4.2px 4.5px 11.1px -13px rgba(0, 0, 0, 0.162),
@@ -502,11 +504,115 @@ li {
     margin-top: 20px;
     font-size: 20px;
 }
-i{
-    font-size: 35px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right : 20px;
- 
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(7, 122, 122);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: yellow;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px yellow;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-color: yellow;
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.bxs-sun {
+    position: relative;
+    top: 9px;
+    right: -23px;
+}
+
+.bxs-moon {
+    color: black;
+    position: relative;
+    top: 9px;
+    right: 3px;
+}
+
+#box {
+    height: 69.5px;
+}
+
+.theme {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    
+}
+.quote{
+    margin-top: 60px;
+}
+q {
+    font-size: 1.5em;
+  
+    
+  }
+  q,
+  cite {
+   
+    margin: 0 auto;
+    font-weight: bolder;
+    display: block;
+   
+    width: 85vw;
+    
+    text-align: center;
+    
+  }
+  cite {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+ 
+
