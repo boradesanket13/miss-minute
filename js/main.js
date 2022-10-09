@@ -16,6 +16,7 @@ setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
 setAngle("sec-hand", secAngle);
 
+
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
 
