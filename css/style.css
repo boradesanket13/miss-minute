@@ -586,7 +586,11 @@ input:checked+.slider:before {
 .theme {
     position: absolute;
     top: 20px;
-    left: 40px;
+    right: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
     
 }
 .quote{
