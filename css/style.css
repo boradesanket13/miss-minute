@@ -140,7 +140,9 @@ li {
 .hours li:nth-of-type(12) span {
     transform: rotate(-360deg);
 }
-
+.darkmodecss .hours li span {
+    color: #000;
+}
 
 .line {
     width: 2px;
