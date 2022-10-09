@@ -590,7 +590,8 @@ input:checked+.slider:before {
     
 }
 .quote{
-    margin-top: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 q {
     font-size: 1.5em;
@@ -614,5 +615,18 @@ q {
     font-size: 1em;
   }
 
- 
-
+ footer{
+    width: 1000px;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0; 
+    left: 13%;   
+ }
+ i:hover,
+ i:focus{
+    color: black;
+ }
+ .time{
+    font-weight: 700;
+ }

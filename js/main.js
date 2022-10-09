@@ -53,7 +53,8 @@ async function updateQuote() {
     console.log(data);
   }
 }
-
+const time = document.querySelector('.time');
+time.innerHTML = new Date().getFullYear();
 
 
 
