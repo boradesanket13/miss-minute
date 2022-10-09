@@ -24,9 +24,25 @@ function themeChange() {
         x.innerHTML = "Dark";
         document.getElementById("icon").classList.add('bxs-moon');
         document.getElementById("icon").classList.remove('bxs-sun');
+        document.getElementById('generate').classList.add('bxs-button');
     } else {
         x.innerHTML = "Light";
         document.getElementById("icon").classList.add('bxs-sun');
         document.getElementById("icon").classList.remove('bxs-moon');
+        document.getElementById('generate').classList.remove('bxs-button');
     }
 }
+
+const button = document.querySelector("#generate");
+
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    fetch("https://type.fit/api/quotes").then((response) => {
+        response.json().then((data) => {
+            let num = Math.floor(Math.random()*1643);
+            console.log(num);
+            document.getElementById('quote').textContent = data[num].text;
+            document.getElementById('quoter').textContent = "- " + data[num].author;
+        })
+    })
+})
