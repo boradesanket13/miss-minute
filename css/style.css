@@ -3,13 +3,18 @@ body {
     /* background: rgb(250, 214, 220); */
     color: rgb(0, 0, 0);
     font-family: Arial;
+    text-shadow: 3px 2px 5px rgb(255, 255, 255);
+   
 }
 
 .darkmodecss {
     background-image: url("darkwall.jpg");
-    color: white;
+   
     font-family: Arial;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 2px 5px rgb(0, 0, 0);
 }
+
 
 .btn {
     margin-left: 0;
@@ -579,6 +584,34 @@ input:checked+.slider:before {
 }
 
 .theme {
-    position: relative;
-    top: 57px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    
 }
+.quote{
+    margin-top: 60px;
+}
+q {
+    font-size: 1.5em;
+  
+    
+  }
+  q,
+  cite {
+   
+    margin: 0 auto;
+    font-weight: bolder;
+    display: block;
+   
+    width: 85vw;
+    
+    text-align: center;
+    
+  }
+  cite {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+ 
