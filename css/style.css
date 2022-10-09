@@ -4,17 +4,15 @@ body {
     color: rgb(0, 0, 0);
     font-family: Arial;
     text-shadow: 3px 2px 5px rgb(255, 255, 255);
-   
 }
 
 .darkmodecss {
     background-image: url("darkwall.jpg");
-   
+
     font-family: Arial;
     color: rgb(255, 255, 255);
     text-shadow: 3px 2px 5px rgb(0, 0, 0);
 }
-
 
 .btn {
     margin-left: 0;
@@ -146,7 +144,6 @@ li {
     transform: rotate(-360deg);
 }
 
-
 .line {
     width: 2px;
     height: 4px;
@@ -157,7 +154,7 @@ li {
     transform-origin: 0 160px;
 }
 
-.line:nth-child(5n+1) {
+.line:nth-child(5n + 1) {
     width: 4px;
     height: 7px;
     background-color: rgb(150, 3, 3);
@@ -404,7 +401,6 @@ li {
     transform: translateY(-165px) rotateZ(calc(59 * 360deg / 60));
 }
 
-
 #clock {
     background: rgb(166, 240, 240);
     border: 14px solid #222;
@@ -413,9 +409,7 @@ li {
     width: 320px;
     height: 320px;
     margin: 22px auto;
-    box-shadow:
-        1.3px 1.3px 7.6px -13px rgba(0, 0, 0, 0.096),
-        4.2px 4.5px 11.1px -13px rgba(0, 0, 0, 0.162),
+    box-shadow: 1.3px 1.3px 7.6px -13px rgba(0, 0, 0, 0.096), 4.2px 4.5px 11.1px -13px rgba(0, 0, 0, 0.162),
         19px 20px 22px -13px rgba(0, 0, 0, 0.44);
 }
 
@@ -526,8 +520,8 @@ li {
     right: 0;
     bottom: 0;
     background-color: rgb(7, 122, 122);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -538,19 +532,19 @@ li {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     background-color: yellow;
 }
 
-input:focus+.slider {
+input:focus + .slider {
     box-shadow: 0 0 1px yellow;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -587,32 +581,29 @@ input:checked+.slider:before {
     position: absolute;
     top: 20px;
     left: 40px;
-    
 }
-.quote{
+.quote {
     margin-top: 60px;
 }
 q {
     font-size: 1.5em;
-  
-    
-  }
-  q,
-  cite {
-   
+}
+q,
+cite {
     margin: 0 auto;
     font-weight: bolder;
     display: block;
-   
+
     width: 85vw;
-    
+
     text-align: center;
-    
-  }
-  cite {
+}
+cite {
     margin-top: 10px;
     font-size: 1em;
-  }
+}
 
- 
-
+.footer-main {
+    padding: 5px;
+    text-align: center;
+}
