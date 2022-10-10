@@ -2,20 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 body {
-    background-image: url("download.jpg");
-    /* background: rgb(250, 214, 220); */
     color: rgb(0, 0, 0);
     font-family: Arial;
-    text-shadow: 3px 2px 5px rgb(255, 255, 255);
-   
-}
+    background-image: url("lightMode.png");
+    background-color: #fff;
+  }
 
 .darkmodecss {
-    background-image: url("darkwall.jpg");
-   
     font-family: Arial;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 2px 5px rgb(0, 0, 0);
+    color: royalblue;
+    background-image: url("darkMode.jpeg");
+    background-color: #000;
 }
 
 
@@ -151,26 +148,16 @@ li {
 
 
 .line {
-    width: 2px;
-    height: 4px;
-    background-color: rgb(6, 27, 54);
     position: absolute;
     left: 50%;
     top: 278px;
     transform-origin: 0 160px;
 }
 
-.line:nth-child(5n+1) {
-    width: 4px;
-    height: 7px;
-    background-color: rgb(150, 3, 3);
-}
 
 .line:nth-child(1) {
     transform: translateY(-165px);
 }
-
-/* .line:nth-child(x) {transform: translateY(-165px) rotateZ(calc((calc(x)-1)* 360deg / 60));} */
 .line:nth-child(2) {
     transform: translateY(-165px) rotateZ(calc(360deg / 60));
 }
@@ -409,8 +396,9 @@ li {
 
 
 #clock {
-    background: rgb(166, 240, 240);
-    border: 14px solid #222;
+    background: royalblue;
+    color: #000;
+    font-weight: bolder;
     border-radius: 50%;
     position: relative;
     width: 320px;
@@ -437,16 +425,16 @@ li {
 }
 
 .hr {
-    background: #222;
-    left: 151px;
-    width: 14px;
+    background: #000;
+    left: 155px;
+    width: 10px;
     height: 85px;
     border-radius: 11px;
     animation: rotateHand 43200s linear infinite;
 }
 
 .hr:after {
-    background: #222;
+    background: #000;
     border-radius: 50%;
     content: "";
     display: block;
@@ -457,16 +445,16 @@ li {
 }
 
 .min {
-    background: #222;
+    background: #000;
     left: 155px;
-    width: 9px;
+    width: 7px;
     height: 125px;
     border-radius: 8px;
     animation: rotateHand 3600s linear infinite;
 }
 
 .min:after {
-    background: #222;
+    background: #000;
     border-radius: 50%;
     content: "";
     display: block;
@@ -528,7 +516,7 @@ li {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(7, 122, 122);
+    background-color:royalblue;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -540,13 +528,13 @@ li {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: black;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: yellow;
+    background-color: white;
 }
 
 input:focus+.slider {
@@ -597,30 +585,24 @@ input:checked+.slider:before {
     
 }
 .quote{
-    margin-top: 60px;
+    margin-top: 45px;
     font-family: 'Marck Script', cursive;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 45px;
 }
 q {
     font-size: 1.5em;
-  
-    
   }
   q,
   cite {
-   
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     font-weight: bold;
     display: block;
-   
     width: 85vw;
-    
     text-align: center;
-    
   }
   cite {
-    margin-top: 10px;
+    margin-top: 4px;
     font-size: 1em;
     font-family: 'Bungee', cursive;
   }
