@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 body {
     background-image: url("download.jpg");
     /* background: rgb(250, 214, 220); */
@@ -595,6 +598,9 @@ input:checked+.slider:before {
 }
 .quote{
     margin-top: 60px;
+    font-family: 'Marck Script', cursive;
+    font-size: 2rem;
+    line-height: 45px;
 }
 q {
     font-size: 1.5em;
@@ -604,8 +610,8 @@ q {
   q,
   cite {
    
-    margin: 0 auto;
-    font-weight: bolder;
+    margin: 2rem auto;
+    font-weight: bold;
     display: block;
    
     width: 85vw;
@@ -616,7 +622,5 @@ q {
   cite {
     margin-top: 10px;
     font-size: 1em;
+    font-family: 'Bungee', cursive;
   }
-
- 
-
