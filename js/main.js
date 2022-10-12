@@ -26,14 +26,14 @@ function themeChange() {
     x.innerHTML = "Dark";
     document.getElementById("icon").classList.add('bxs-moon');
     document.getElementById("icon").classList.remove('bxs-sun');
-    document.getElementById('linkedIn').style.fill = 'white'
-    document.getElementById('github').style.fill = 'white'
+    document.getElementsByClassName("menu-open-button")[0].style.background = 'white';
+    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black'
   } else {
     x.innerHTML = "Light";
     document.getElementById("icon").classList.add('bxs-sun');
     document.getElementById("icon").classList.remove('bxs-moon');
-    document.getElementById('linkedIn').style.fill = 'black'
-    document.getElementById('github').style.fill = 'black'
+    document.getElementsByClassName("menu-open-button")[0].style.background = '#a6f0f0';
+    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black'
   }
 }
 
