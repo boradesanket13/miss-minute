@@ -1,23 +1,35 @@
 # Analog Clock
 
-### Basic Functionality
-1. Analog Clock 
-2. 2 themes available (light and dark)
-3. uses Date() object of JavaScript
+## Features
 
-### Tech Stack Used
+1. Analog Clock
+2. Two themes available (Light and Dark)
+3. Toggle button to switch between the two themes
+4. uses Date() object of JavaScript
+5. Random quote is shown below the clock
 
-> HTML
+## Techstack
 
-> CSS 
+- HTML
+- CSS 
+- JavaScript
 
-> JavaScript
+## Screenshots
 
-### Some Snap Shots
+### Light Mode
 
-## Light Mode
-<img src="https://user-images.githubusercontent.com/68043753/194116073-a5b84374-c6d9-47df-8210-946edb355108.png" />
+![Screenshot from 2022-10-13 23-22-19](https://user-images.githubusercontent.com/47355538/195670094-4b43acf1-082c-4f47-a43c-c2eab47515ac.png)
 
-## Dark Mode
+### Dark Mode
 
-<img src="https://user-images.githubusercontent.com/68043753/194116214-0e1d2a13-a7df-4d6c-9875-b1920da69c33.png" />
+![Screenshot from 2022-10-13 23-23-12](https://user-images.githubusercontent.com/47355538/195670250-6036f5b8-25c9-481c-8295-c2a8dc64530b.png)
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Sanket1308/analog-clock.git
+```
+2. Use live server to host the `index.html` file
+
+3. Open browser and go to that localhost on which the `index.html` is hosted
