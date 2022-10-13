@@ -14,6 +14,12 @@
 - CSS 
 - JavaScript
 
+## Deployed App
+
+```bash
+http://analog-clock-chi-seven.vercel.app/
+```
+
 ## Screenshots
 
 ### Light Mode
