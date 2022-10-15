@@ -11,17 +11,6 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Mention the project at local meetups and tell your friends/colleagues
 
 
-## Table of Contents
-
-- [I Have a Question](#i-have-a-question)
-- [I Want To Contribute](#i-want-to-contribute)
-- [Your First Code Contribution](#your-first-code-contribution)
-- [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
-- [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
-
-
 ## I Have a Question
 
 > If you want to ask a question, we assume that you have read the available [Documentation]().
@@ -59,15 +48,3 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 - Possibly your input and the output
 - Can you reliably reproduce the issue? And can you also reproduce it with older versions?
 
-
-### Your First Code Contribution
-
-
-### Improving The Documentation
-
-
-## Styleguides
-### Commit Messages
-
-
-## Join The Project Team
