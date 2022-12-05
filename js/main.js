@@ -44,19 +44,41 @@ const cite = document.querySelector("cite");
 
 updateQuote();
 
-// API -> https://github.com/lukePeavey/quotable
+// // API -> https://github.com/lukePeavey/quotable
+// async function updateQuote() {
+//   const response = await fetch("https://api.quotable.io/random");
+//   const data = await response.json();
+//   if (response.ok) {
+//     // Update DOM elements
+//     quote.innerText = data.content;
+//     cite.textContent = "~ " + data.author + " ~";
+//   } else {
+//     quote.textContent = "An error occured";
+//     console.log(data);
+//   }
+// }
+
+// API JOKE -> https://v2.jokeapi.dev/joke
 async function updateQuote() {
-  const response = await fetch("https://api.quotable.io/random");
+
+  const response = await fetch("https://v2.jokeapi.dev/joke/Any");
   const data = await response.json();
-  if (response.ok) {
+  if (!response.error) {
     // Update DOM elements
-    quote.innerText = data.content;
-    cite.textContent = "~ " + data.author + " ~";
+    if(data.type=="single")
+      {quote.innerText = data.joke;}
+    else
+    {
+      quote.innerText = data.setup+"\n"+data.delivery;
+     
+    }
+    
   } else {
     quote.textContent = "An error occured";
     console.log(data);
   }
 }
+
 
 
 
