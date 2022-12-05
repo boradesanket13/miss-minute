@@ -27,18 +27,17 @@ function themeChange() {
     document.getElementById("icon").classList.add('bxs-moon');
     document.getElementById("icon").classList.remove('bxs-sun');
     document.getElementsByClassName("menu-open-button")[0].style.background = 'white';
-    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black'
+    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black';
   } else {
     x.innerHTML = "Light";
     document.getElementById("icon").classList.add('bxs-sun');
     document.getElementById("icon").classList.remove('bxs-moon');
     document.getElementsByClassName("menu-open-button")[0].style.background = '#a6f0f0';
-    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black'
+    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black';
   }
 }
 
 // quotes
-
 const quote = document.querySelector("q");
 const cite = document.querySelector("cite");
 
@@ -57,7 +56,3 @@ async function updateQuote() {
     console.log(data);
   }
 }
-
-
-
-
