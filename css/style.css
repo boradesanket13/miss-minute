@@ -35,6 +35,12 @@ li {
     height: 160px;
 }
 
+.date {
+    font-size: 30px;
+    position: absolute;
+    margin: 0%;
+}
+
 .hours {
     left: 120px;
     font-size: 23.333333333px;

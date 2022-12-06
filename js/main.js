@@ -8,6 +8,15 @@ var hrAngle = hr * 30 + (min * 6 / 12),
   minAngle = min * 6 + (sec * 6 / 60),
   secAngle = sec * 6 + (millisec * 0.36 / 1000);
 
+var date = dateInfo.getDate(),
+  month = dateInfo.getMonth(),
+  year = dateInfo.getFullYear();
+
+function getDate() {
+  document.querySelector("#display-date").textContent = date + "/" + month + "/" + year;
+}
+getDate();
+
 // set initial angles of the hand wrappers
 function setAngle(wrapper, angle) {
   document.querySelector("." + wrapper).style.transform = "rotate(" + angle + "deg)";
