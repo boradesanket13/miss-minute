@@ -590,10 +590,11 @@ input:checked + .slider:before {
   justify-content: end;
 }
 .quote {
-  margin-top: 60px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  line-height: 50px;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 50px;
+    text-align: center;
 }
 q {
   font-size: 1.5em;
