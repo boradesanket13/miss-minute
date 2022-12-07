@@ -659,6 +659,8 @@ cite {
     height: 45px;
     position: absolute;
     color: white;
+    left: 90rem;
+    float: right;
     text-align: center;
     line-height: 80px;
     -webkit-transform: translate3d(0, 0, 0);
