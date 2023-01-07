@@ -6,6 +6,9 @@ body {
     color: rgb(0, 0, 0);
     font-family: Arial;
     text-shadow: 3px 2px 5px rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
 }
 
 .darkmodecss {
@@ -623,6 +626,7 @@ cite {
     position: absolute;
     height: 0px;
     width: 100%;
+    /* margin-top: 100px; */
 }
 .footer-icons {
     height: 0px;
@@ -659,10 +663,11 @@ cite {
     height: 45px;
     position: absolute;
     color: white;
-    left: 90rem;
+    /* left: 90rem; */
     float: right;
     text-align: center;
     line-height: 80px;
+    margin-top: 14rem;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-transition: -webkit-transform ease-out 200ms;
@@ -825,4 +830,9 @@ cite {
     font-size: 24px;
     min-width: 196px;
   }
+  /* .menu-item,
+.menu-open-button{
+    margin-top: -2rem;
+} */
+
 }
