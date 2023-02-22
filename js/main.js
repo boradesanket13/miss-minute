@@ -1,16 +1,31 @@
 var dateInfo = new Date();
-var hr = dateInfo.getHours() > 12 ? dateInfo.getHours() - 12 : dateInfo.getHours(),
+var hr =
+    dateInfo.getHours() > 12 ? dateInfo.getHours() - 12 : dateInfo.getHours(),
   min = dateInfo.getMinutes(),
   sec = dateInfo.getSeconds(),
   millisec = dateInfo.getMilliseconds();
 
-var hrAngle = hr * 30 + (min * 6 / 12),
-  minAngle = min * 6 + (sec * 6 / 60),
-  secAngle = sec * 6 + (millisec * 0.36 / 1000);
+let digital = document.getElementById("digital");
+
+setInterval(() => {
+  let dateInfo = new Date();
+  let hr =
+      dateInfo.getHours() > 12 ? dateInfo.getHours() - 12 : dateInfo.getHours(),
+    min = dateInfo.getMinutes(),
+    sec = dateInfo.getSeconds();
+
+  digital.innerText = `${hr} : ${min} : ${sec}`;
+}, 1000);
+
+var hrAngle = hr * 30 + (min * 6) / 12,
+  minAngle = min * 6 + (sec * 6) / 60,
+  secAngle = sec * 6 + (millisec * 0.36) / 1000;
 
 // set initial angles of the hand wrappers
 function setAngle(wrapper, angle) {
-  document.querySelector("." + wrapper).style.transform = "rotate(" + angle + "deg)";
+  document.querySelectorAll("." + wrapper).forEach((element) => {
+    element.style.transform = "rotate(" + angle + "deg)";
+  });
 }
 setAngle("hr-hand", hrAngle);
 setAngle("min-hand", minAngle);
@@ -20,20 +35,24 @@ function themeChange() {
   let element = document.body;
   element.classList.toggle("darkmodecss");
   element.classList.toggle("cite");
-  var x = document.querySelector(".heading")
+  var x = document.querySelector(".heading");
 
   if (x.innerHTML === "Light") {
     x.innerHTML = "Dark";
-    document.getElementById("icon").classList.add('bxs-moon');
-    document.getElementById("icon").classList.remove('bxs-sun');
-    document.getElementsByClassName("menu-open-button")[0].style.background = 'white';
-    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black';
+    document.getElementById("icon").classList.add("bxs-moon");
+    document.getElementById("icon").classList.remove("bxs-sun");
+    document.getElementsByClassName("menu-open-button")[0].style.background =
+      "white";
+    document.getElementsByClassName("hamburger")[0].style.backgroundColor =
+      "black";
   } else {
     x.innerHTML = "Light";
-    document.getElementById("icon").classList.add('bxs-sun');
-    document.getElementById("icon").classList.remove('bxs-moon');
-    document.getElementsByClassName("menu-open-button")[0].style.background = '#a6f0f0';
-    document.getElementsByClassName('hamburger')[0].style.backgroundColor = 'black';
+    document.getElementById("icon").classList.add("bxs-sun");
+    document.getElementById("icon").classList.remove("bxs-moon");
+    document.getElementsByClassName("menu-open-button")[0].style.background =
+      "#a6f0f0";
+    document.getElementsByClassName("hamburger")[0].style.backgroundColor =
+      "black";
   }
 }
 
@@ -63,17 +82,43 @@ async function updateJoke() {
   const data = await response.json();
   if (!data.error) {
     // Update DOM elements
-    if(data.type=="single")
-    {
+    if (data.type == "single") {
       quote.innerText = data.joke;
+    } else {
+      quote.innerText = data.setup + "\n" + data.delivery;
     }
-    else
-    {
-      quote.innerText = data.setup+"\n"+data.delivery;
-    }
-    
   } else {
     quote.textContent = "An error occured";
     console.log(data);
   }
 }
+
+let clock_style = {
+  Normal: {
+    name: "Normal",
+    id: "normal",
+  },
+  transparent: {
+    name: "Transparent",
+    id: "transparent",
+  },
+};
+
+Object.values(clock_style).forEach((obj) => {
+  let div = document.createElement("div");
+  div.innerText = obj.name;
+  div.addEventListener("click", () => {
+    for (let element of document.getElementsByClassName("clk")) {
+      if (element.dataset.name === obj.id) {
+        element.classList.add("activeClk");
+        element.classList.remove("hideClk");
+      } else {
+        element.classList.add("hideClk");
+        element.classList.remove("activeClk");
+      }
+    }
+  });
+  let clocks = document.getElementById("clocks");
+
+  clocks.appendChild(div);
+});
