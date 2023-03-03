@@ -19,6 +19,11 @@ body {
     text-shadow: 3px 2px 5px rgb(0, 0, 0);
 }
 
+.digital {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
 .btn {
     margin-left: 0;
 }
@@ -418,6 +423,22 @@ li {
         19px 20px 22px -13px rgba(0, 0, 0, 0.44);
 }
 
+.transparentClk  {
+    position: relative;
+    margin: 22px auto;
+    width: 320px;
+    height: 320px;
+    display: none;
+}
+
+.activeClk {
+    display: block;
+}
+
+.hideClk {
+    display: none;
+}
+
 .hr-hand,
 .min-hand,
 .sec-hand {
@@ -439,6 +460,35 @@ li {
     height: 85px;
     border-radius: 11px;
     animation: rotateHand 43200s linear infinite;
+}
+
+.clocks {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.clocks div {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #a6f0f0;
+    cursor: pointer;
+}
+
+.darkmodecss .hand.hr.transparent  {
+    background: rgb(255, 255, 255);
+}
+.darkmodecss .hand.min.transparent  {
+    background: rgb(255, 255, 255);
+}
+
+.line-wrapper {
+    position: absolute;
+    left: 160px;
+    top: -113px;
 }
 
 .hr:after {
