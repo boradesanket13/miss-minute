@@ -70,6 +70,10 @@ body {
     justify-content: flex-end;
     width: 106px;
   }
+
+  .digital.transparent > p::after{
+    width: 112px;
+  }
   
   #meridiem::after {
     display: none;
