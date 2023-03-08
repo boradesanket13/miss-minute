@@ -21,8 +21,59 @@ body {
 
 .digital {
     font-size: 24px;
-    margin-top: 40px;
-}
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .digital > p {
+    height: 80px;
+    width: 80px;
+    background: repeating-linear-gradient(
+        315deg,
+        #a94cff,
+        #b27be4fc,
+        #907da18c 3px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none;
+  }
+
+  .digital.transparent > p{
+    border: 3px #a94cff groove;
+    background: transparent;
+  }
+  
+  .darkmodecss .digital > p {
+    background: repeating-linear-gradient(
+      45deg,
+      #5e2085,
+      #4d11bbd6,
+      #21123dde 5px
+    );
+  }
+  
+  .darkmodecss .digital.transparent > p {
+    border: 3px #6612ff groove;
+    background: transparent ;
+  }
+  
+  .digital > p::after {
+    position: absolute;
+    content: ":";
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 106px;
+  }
+  
+  #merdium::after {
+    display: none;
+  }
 
 .btn {
     margin-left: 0;
