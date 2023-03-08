@@ -12,7 +12,7 @@ let digital = document.getElementById("digital"),
   meridiemText = document.getElementById("meridiem");
 
 setInterval(() => {
-  let dateInfo = new Date(1, 1);
+  let dateInfo = new Date();
   let timeTextInfo = dateInfo.toLocaleTimeString();
   let [hr, min, sec] = timeTextInfo.split(":");
   let meridiem = "AM";
