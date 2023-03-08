@@ -9,26 +9,26 @@ let digital = document.getElementById("digital"),
   hrText = document.getElementById("hr"),
   minText = document.getElementById("min"),
   secText = document.getElementById("sec"),
-  merdiumText = document.getElementById("merdium");
+  meridiemText = document.getElementById("meridiem");
 
 setInterval(() => {
-  let dateInfo = new Date();
+  let dateInfo = new Date(1, 1);
   let timeTextInfo = dateInfo.toLocaleTimeString();
   let [hr, min, sec] = timeTextInfo.split(":");
-  let merdium = "AM";
-  if (hr === "00") {
-    hr = "12";
-  }
+  let meridiem = "AM";
   if (hr >= 12) {
-    merdium = "PM";
+    meridiem = "PM";
     if (hr > 12) {
       hr = (hr - 12).toString().padStart(2, "0");
     }
   }
+  if (hr === "00") {
+    hr = "12";
+  }
   hrText.textContent = hr;
   minText.textContent = min;
   secText.textContent = sec;
-  merdiumText.textContent = merdium;
+  meridiemText.textContent = meridiem;
 }, 1000);
 
 var hrAngle = hr * 30 + (min * 6) / 12,
