@@ -5,16 +5,30 @@ var hr =
   sec = dateInfo.getSeconds(),
   millisec = dateInfo.getMilliseconds();
 
-let digital = document.getElementById("digital");
+let digital = document.getElementById("digital"),
+  hrText = document.getElementById("hr"),
+  minText = document.getElementById("min"),
+  secText = document.getElementById("sec"),
+  meridiemText = document.getElementById("meridiem");
 
 setInterval(() => {
   let dateInfo = new Date();
-  let hr =
-      dateInfo.getHours() > 12 ? dateInfo.getHours() - 12 : dateInfo.getHours(),
-    min = dateInfo.getMinutes(),
-    sec = dateInfo.getSeconds();
-
-  digital.innerText = `${hr} : ${min} : ${sec}`;
+  let timeTextInfo = dateInfo.toLocaleTimeString();
+  let [hr, min, sec] = timeTextInfo.split(":");
+  let meridiem = "AM";
+  if (hr >= 12) {
+    meridiem = "PM";
+    if (hr > 12) {
+      hr = (hr - 12).toString().padStart(2, "0");
+    }
+  }
+  if (hr === "00") {
+    hr = "12";
+  }
+  hrText.textContent = hr;
+  minText.textContent = min;
+  secText.textContent = sec;
+  meridiemText.textContent = meridiem;
 }, 1000);
 
 var hrAngle = hr * 30 + (min * 6) / 12,
@@ -116,6 +130,11 @@ Object.values(clock_style).forEach((obj) => {
         element.classList.add("hideClk");
         element.classList.remove("activeClk");
       }
+    }
+    if (digital.dataset.name !== obj.id) {
+      digital.classList.add(obj.id);
+      digital.classList.remove(digital.dataset.name);
+      digital.dataset.name = obj.id;
     }
   });
   let clocks = document.getElementById("clocks");
