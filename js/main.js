@@ -166,7 +166,17 @@ function removeBackground() {
   element.style.backgroundImage = '';
 
   // Toggle styles based on the current mode
-  if (currentMode === 'dark') {
+  if (currentMode === 'light') {
+  element.classList.toggle("darkmodecss");
+  element.classList.toggle("cite");
+    var x = document.querySelector(".heading");
+    
+    x.innerHTML = "Light";
+    document.getElementById("icon").classList.add("bxs-sun");
+    document.getElementById("icon").classList.remove("bxs-moon");
+    document.getElementsByClassName("menu-open-button")[0].style.background ="#a6f0f0";
+    document.getElementsByClassName("hamburger")[0].style.backgroundColor ="black";
+    element.classList.toggle("darkmodecss");
     element.classList.remove('darkmodecss');
     element.style.color = 'rgb(0, 0, 0)';
     element.style.textShadow = '3px 2px 5px rgb(255, 255, 255)';
