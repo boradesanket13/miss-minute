@@ -141,3 +141,38 @@ Object.values(clock_style).forEach((obj) => {
 
   clocks.appendChild(div);
 });
+
+//handling image and adding as wallpaper
+function handleImage() {
+  const input = document.getElementById('imageInput');
+  const file = input.files[0];
+
+  if (file) {
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+          document.body.style.backgroundImage = `url('${e.target.result}')`;
+      };
+
+      reader.readAsDataURL(file);
+  }
+}
+let currentMode = 'light'; // Initial mode
+
+function removeBackground() {
+  let element = document.body;
+
+  // Remove background image
+  element.style.backgroundImage = '';
+
+  // Toggle styles based on the current mode
+  if (currentMode === 'dark') {
+    element.classList.remove('darkmodecss');
+    element.style.color = 'rgb(0, 0, 0)';
+    element.style.textShadow = '3px 2px 5px rgb(255, 255, 255)';
+  } else {
+    element.classList.add('darkmodecss');
+    element.style.color = 'rgb(255, 255, 255)';
+    element.style.textShadow = '3px 2px 5px rgb(0, 0, 0)';
+  }
+}

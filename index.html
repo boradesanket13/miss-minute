@@ -7,7 +7,7 @@
 
     <!-- Style.css Linked-->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style2.less" />
+    <!-- <link rel="stylesheet" href="css/style2.css" /> -->
     <!-- <button onclick="themeChange()">Change</button> -->
     <link
       rel="stylesheet"
@@ -178,6 +178,13 @@
     </center>
 
     <div class="clocks" id="clocks"></div>
+    <!-- files for background -->
+    <div id="container">
+      <input type="file" id="imageInput" accept="image/*" onchange="handleImage()">
+      <label for="imageInput" class="fileLabel">Choose Image</label>
+      <!-- <img id="imagePreview" src="" alt="Image Preview"> -->
+      <button id="removeBackgroundBtn" onclick="removeBackground()">Remove Background</button>
+    </div>
     <!-- footer -->
     <div class="footer-main">
       <nav class="menu">
@@ -284,5 +291,6 @@
       </svg>
     </div>
   </body>
+  
   <script src="js/main.js"></script>
 </html>
